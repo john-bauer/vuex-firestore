@@ -2,6 +2,7 @@ import firebase from '@firebase/app'
 import '@firebase/auth'
 import '@firebase/firestore'
 
+// You have to put your own settings here
 firebase.initializeApp({
   apiKey: 'AIzaSyCZGnRjXMrhBeTTvOOwxAag-dXdkXA1Pxc',
   authDomain: 'cloudlogicdev.firebaseapp.com',
