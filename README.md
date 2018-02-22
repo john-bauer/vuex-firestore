@@ -1,6 +1,6 @@
-# vue-skeleton
+# vuex-firestore
 
-> Vue Skeleton
+> Vuex Firestore Template
 
 ## Build Setup
 
