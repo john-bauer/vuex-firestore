@@ -1,0 +1,51 @@
+<template>
+
+  <b-navbar toggleable="md" type="dark" variant="info" sticky>
+
+    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+    <b-navbar-brand to="/">vue-skeleton</b-navbar-brand>
+
+    <b-collapse is-nav id="nav_collapse">
+
+      <b-navbar-nav>
+
+        <b-nav-item href="#">link 1</b-nav-item>
+        <b-nav-item href="#">link 2</b-nav-item>
+        <b-nav-item href="#">link 3</b-nav-item>
+
+      </b-navbar-nav>
+
+      <!-- Right aligned nav items -->
+      <b-navbar-nav class="ml-auto">
+
+        <b-form-input v-model="username" size="sm" class="mr-sm-2" type="text" placeholder="Username"/>
+        <b-form-input v-model="password" size="sm" class="mr-sm-2" type="text" placeholder="Password"/>
+        <b-button @click="login" size="sm" class="my-2 my-sm-0">login</b-button>
+
+      </b-navbar-nav>
+
+    </b-collapse>
+  </b-navbar>
+
+</template>
+
+<script>
+
+export default {
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    login () {
+
+    },
+    logout () {
+
+    }
+  }
+}
+</script>
