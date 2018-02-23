@@ -58,6 +58,7 @@ export default {
           }
         )
     },
+    /*
     signUserInGoogle ({commit}) {
       commit('setLoading', true)
       commit('clearError')
@@ -162,6 +163,7 @@ export default {
         photoUrl: payload.photoURL
       })
     },
+    */
     logout ({commit}) {
       firebase.auth().signOut()
       commit('setUser', null)
