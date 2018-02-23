@@ -30,7 +30,7 @@ export default {
           error => {
             commit('setLoading', false)
             commit('setError', error)
-            console.log(error)
+            // console.log(error)
           }
         )
     },
@@ -54,7 +54,7 @@ export default {
           error => {
             commit('setLoading', false)
             commit('setError', error)
-            console.log(error)
+            // console.log(error)
           }
         )
     },
@@ -78,7 +78,7 @@ export default {
           error => {
             commit('setLoading', false)
             commit('setError', error)
-            console.log(error)
+            // console.log(error)
           }
         )
     },
@@ -102,7 +102,7 @@ export default {
           error => {
             commit('setLoading', false)
             commit('setError', error)
-            console.log(error)
+            // console.log(error)
           }
         )
     },
@@ -126,7 +126,7 @@ export default {
           error => {
             commit('setLoading', false)
             commit('setError', error)
-            console.log(error)
+            // console.log(error)
           }
         )
     },
@@ -150,7 +150,7 @@ export default {
           error => {
             commit('setLoading', false)
             commit('setError', error)
-            console.log(error)
+            // console.log(error)
           }
         )
     },
