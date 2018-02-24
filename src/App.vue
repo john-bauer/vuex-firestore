@@ -2,13 +2,13 @@
   <div id="app">
 
     <header>
-      <app-navbar :showLogin='true'/>
+      <app-navbar :showLoginInline='false'/>
       <br>
     </header>
 
     <b-container>
       <app-alert v-if="error" @dismissed="onDismissed" :variant="'danger'" :text="error.message"></app-alert>
-      <p v-if="loading">loading...</p>
+      <h1 v-if="loading">Loading ...</h1>
     </b-container>
 
     <b-container>

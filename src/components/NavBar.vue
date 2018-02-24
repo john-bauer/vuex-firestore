@@ -10,15 +10,14 @@
 
       <b-navbar-nav>
 
-        <b-nav-item to="#1">link 1</b-nav-item>
-        <b-nav-item to="#2">link 2</b-nav-item>
-        <b-nav-item to="#3">link 3</b-nav-item>
+        <b-nav-item to="#">link</b-nav-item>
         <b-nav-item v-if="userIsAuthenticated" to="/profile">profile</b-nav-item>
 
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
-      <b-navbar-nav v-if="showLogin" class="ml-auto">
+
+      <b-navbar-nav v-if="showLoginInline" class="ml-auto">
         <b-form v-if="!userIsAuthenticated" inline>
           <label class="sr-only" for="email">Name</label>
           <b-form-input autocomplete="email" v-model="email" size="sm" class="mr-sm-2" type="email" placeholder="Email" id="email"/>
@@ -30,6 +29,11 @@
       </b-navbar-nav>
 
     </b-collapse>
+
+    <b-navbar-nav  v-if="!showLoginInline" class="ml-auto">
+      <b-nav-item to="/auth"><icon name="user"/></b-nav-item>
+    </b-navbar-nav>
+
   </b-navbar>
 
 </template>
@@ -43,7 +47,7 @@
       }
     },
     props: {
-      showLogin: {
+      showLoginInline: {
         type: Boolean,
         default: false
       }
@@ -72,18 +76,6 @@
     methods: {
       onSignin () {
         this.$store.dispatch('signUserIn', {email: this.email, password: this.password})
-      },
-      onSigninGoogle () {
-        this.$store.dispatch('signUserInGoogle')
-      },
-      onSigninFacebook () {
-        this.$store.dispatch('signUserInFacebook')
-      },
-      onSigninGithub () {
-        this.$store.dispatch('signUserInGithub')
-      },
-      onSigninTwitter () {
-        this.$store.dispatch('signUserInTwitter')
       },
       onDismissed () {
         this.$store.dispatch('clearError')

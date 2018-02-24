@@ -10,6 +10,9 @@ import FooterBar from './components/FooterBar.vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon.vue'
+
 Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false
@@ -17,6 +20,8 @@ Vue.config.productionTip = false
 Vue.component('app-alert', AlertBox)
 Vue.component('app-navbar', NavBar)
 Vue.component('app-footer', FooterBar)
+
+Vue.component('icon', Icon)
 
 /* eslint-disable no-new */
 new Vue({
