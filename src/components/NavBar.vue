@@ -1,6 +1,6 @@
 <template>
 
-  <b-navbar toggleable="md" type="dark" variant="info" sticky>
+  <b-navbar toggleable="md" type="dark" variant="primary" sticky>
 
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
