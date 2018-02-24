@@ -20,8 +20,10 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-form v-if="!userIsAuthenticated" inline>
-          <b-form-input autocomplete="email" v-model="email" size="sm" class="mr-sm-2" type="email" placeholder="Email"/>
-          <b-form-input autocomplete="current-password" v-model="password" size="sm" class="mr-sm-2" type="password" placeholder="Password"/>
+          <label class="sr-only" for="email">Name</label>
+          <b-form-input autocomplete="email" v-model="email" size="sm" class="mr-sm-2" type="email" placeholder="Email" id="email"/>
+          <label class="sr-only" for="password">Passwird</label>
+          <b-form-input autocomplete="current-password" v-model="password" size="sm" class="mr-sm-2" type="password" placeholder="Password" id="password"/>
           <b-button @click="onSignin" size="sm" class="my-2 my-sm-0">login</b-button>
         </b-form>
         <b-button v-else @click="onLogout" size="sm" class="my-2 my-sm-0">logout</b-button>
