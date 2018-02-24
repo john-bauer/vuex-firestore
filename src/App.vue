@@ -2,12 +2,13 @@
   <div id="app">
 
     <header>
-      <navbar/>
+      <app-navbar :showLogin='true'/>
       <br>
     </header>
 
     <b-container>
       <app-alert v-if="error" @dismissed="onDismissed" :variant="'danger'" :text="error.message"></app-alert>
+      <p v-if="loading">loading...</p>
     </b-container>
 
     <b-container>
@@ -16,7 +17,7 @@
 
     <footer>
       <b-container>
-        <footerbar/>
+        <app-footer/>
       </b-container>
     </footer>
 
@@ -24,16 +25,15 @@
 </template>
 
 <script>
-import navbar from './components/NavBar'
-import footerbar from './components/FooterBar'
 
 export default {
   name: 'app',
   components: {
-    navbar,
-    footerbar
   },
   computed: {
+    loading () {
+      return this.$store.getters.loading
+    },
     error () {
       return this.$store.getters.error
     }

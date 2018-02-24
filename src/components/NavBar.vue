@@ -18,7 +18,7 @@
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
-      <b-navbar-nav class="ml-auto">
+      <b-navbar-nav v-if="showLogin" class="ml-auto">
         <b-form v-if="!userIsAuthenticated" inline>
           <label class="sr-only" for="email">Name</label>
           <b-form-input autocomplete="email" v-model="email" size="sm" class="mr-sm-2" type="email" placeholder="Email" id="email"/>
@@ -40,6 +40,12 @@
       return {
         email: '',
         password: ''
+      }
+    },
+    props: {
+      showLogin: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
